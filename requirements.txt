@@ -1,0 +1,27 @@
+# IB Trading Signals - Python Dependencies
+
+# Core data manipulation
+pandas>=2.0.0
+numpy>=1.24.0
+
+# API requests
+requests>=2.31.0
+
+# Market data
+norgatedata>=2.0.0
+
+# Technical analysis
+ta>=0.11.0
+
+# Date/time handling
+pytz>=2023.3
+exchange-calendars>=4.2.0
+
+# Yahoo Finance (for data validation)
+yfinance>=0.2.28
+
+# Environment variables
+python-dotenv>=1.0.0
+
+# Email (legacy - not currently used but imported)
+# email and smtplib are built-in Python modules
