@@ -5,13 +5,13 @@ import os
 
 # Add parent directory to path to import ib_api_client
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from ib_api_client import IBApiClient
+from ib_api_client import IBTradingAPI
 
 # ============================================================================
 # IB Trading App API Functions (Active)
 # ============================================================================
 
-def fetch_ib_account_summary(client: IBApiClient, account=None):
+def fetch_ib_account_summary(client: IBTradingAPI, account=None):
     """
     Fetch account summary from IB Trading App API.
 
@@ -36,7 +36,7 @@ def fetch_ib_account_summary(client: IBApiClient, account=None):
         return {}
 
 
-def fetch_ib_positions(client: IBApiClient, account=None):
+def fetch_ib_positions(client: IBTradingAPI, account=None):
     """
     Fetch open positions from IB Trading App API.
 

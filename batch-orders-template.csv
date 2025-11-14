@@ -1,16 +1,20 @@
-Symbol,Action,Quantity,OrderType,LimitPrice,StopPrice,SecurityType,Exchange,Timezone,TimeInForce,GoodTillDate,AttachMOC,Strategy,OutsideRTH,AllOrNone,Hidden,DisplaySize,DisplaySizeIsPercentage
+Symbol,Account,Action,Quantity,OrderType,LimitPrice,StopPrice,SecurityType,Exchange,Timezone,TimeInForce,GoodTillDate,AttachMOC,Strategy,OutsideRTH,AllOrNone,Hidden,DisplaySize,DisplaySizeIsPercentage
+
+# NOTE: Account column is optional. Leave blank to use default account selected in UI.
 
 # Simple Orders (no MOC close)
-AAPL,BUY,100,LIMIT,150.00,,STK,SMART,,GTD,2025-01-29T15:45,NO,Momentum SPY,NO,NO,NO,0,NO
-GOOGL,SELL,25,LIMIT,140.00,,STK,SMART,,GTC,,NO,Day Trading,NO,NO,NO,0,NO
+AAPL,,BUY,100,LIMIT,150.00,,STK,SMART,,GTD,2025-01-29T15:45,NO,Momentum SPY,NO,NO,NO,0,NO
+GOOGL,,SELL,25,LIMIT,140.00,,STK,SMART,,GTC,,NO,Day Trading,NO,NO,NO,0,NO
+
+# Orders with specific account (overrides default)
+MSFT,DU123456,BUY,50,MARKET,,,STK,,,DAY,,YES,,NO,NO,NO,0,NO
 
 # Orders with MOC Close (automatically creates reversal MOC order)
-MSFT,BUY,50,MARKET,,,STK,,,DAY,,YES,,NO,NO,NO,0,NO
-TSLA,BUY,10,LIMIT,200.00,,STK,,,DAY,,YES,,NO,NO,NO,0,NO
+TSLA,,BUY,10,LIMIT,200.00,,STK,,,DAY,,YES,,NO,NO,NO,0,NO
 
 # CFD Orders with MOC Close
-AAPL,BUY,10,MARKET,,,CFD,SMART,,DAY,,YES,,NO,NO,NO,0,NO
+AAPL,,BUY,10,MARKET,,,CFD,SMART,,DAY,,YES,,NO,NO,NO,0,NO
 
 # International Markets with MOC Close
-BHP,BUY,200,LIMIT,45.00,,STK,ASX,,GTD,2025-01-29T15:45,YES,,YES,NO,NO,0,NO
-VOD,SELL,300,LIMIT,0.85,,STK,LSE,Europe/London,GTD,2025-01-29T16:00,YES,,NO,NO,NO,10,YES
+BHP,,BUY,200,LIMIT,45.00,,STK,ASX,,GTD,2025-01-29T15:45,YES,,YES,NO,NO,0,NO
+VOD,,SELL,300,LIMIT,0.85,,STK,LSE,Europe/London,GTD,2025-01-29T16:00,YES,,NO,NO,NO,10,YES
